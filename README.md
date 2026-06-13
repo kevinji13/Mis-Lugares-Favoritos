@@ -1,50 +1,94 @@
-# Welcome to your Expo app 👋
+# Mis Lugares Favoritos
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Aplicación móvil desarrollada con React Native, Expo Router y TypeScript para registrar, visualizar, consultar y eliminar lugares favoritos.
 
-## Get started
+## Descripción
 
-1. Install dependencies
+Mis Lugares Favoritos permite gestionar una lista de lugares que el usuario desea visitar o recordar. La aplicación almacena la información únicamente en memoria utilizando estados de React, sin emplear bases de datos ni servicios externos.
 
-   ```bash
-   npm install
-   ```
+## Características
 
-2. Start the app
+- Listado de lugares registrados.
+- Registro de nuevos lugares mediante formulario.
+- Validación de campos obligatorios.
+- Visualización detallada de cada lugar.
+- Eliminación de lugares con confirmación previa.
+- Navegación entre pantallas utilizando Expo Router.
+- Interfaz adaptada para dispositivos móviles.
+- Desarrollo utilizando TypeScript con interfaces y tipado de estados.
 
-   ```bash
-   npx expo start
-   ```
+## Tecnologías utilizadas
 
-In the output, you'll find options to open the app in a
+- React Native
+- Expo
+- Expo Router
+- TypeScript
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Estructura de datos
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```typescript
+export interface Lugar {
+  id: number;
+  nombre: string;
+  ciudad: string;
+  categoria: string;
+  descripcion: string;
+}
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Pantallas
 
-## Learn more
+### Pantalla principal
 
-To learn more about developing your project with Expo, look at the following resources:
+- Muestra la lista de lugares registrados.
+- Permite acceder al detalle de cada lugar.
+- Permite eliminar lugares.
+- Incluye acceso al formulario de registro.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Nuevo lugar
 
-## Join the community
+- Formulario para registrar:
+  - Nombre
+  - Ciudad
+  - Categoría
+  - Descripción
 
-Join our community of developers creating universal apps.
+- Validación de campos obligatorios.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Detalle del lugar
+
+- Muestra toda la información registrada:
+  - Nombre
+  - Ciudad
+  - Categoría
+  - Descripción
+
+## Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone <URL_DEL_REPOSITORIO>
+```
+
+Ingresar al proyecto:
+
+```bash
+cd mis-lugares-favoritos
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar la aplicación:
+
+```bash
+npx expo start
+```
+
+## Desarrollado por
+
+Kevin Jiménez
